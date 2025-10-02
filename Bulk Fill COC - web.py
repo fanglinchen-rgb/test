@@ -283,7 +283,10 @@ if excel_file and zip_file:
                     country = str(data.get("Country", "US")).strip().upper()  # normalize
 
                     # Search for matching PDF template in extracted folder
-                    matches = glob.glob(os.path.join(tmp_zip_dir, f"**/{country}.pdf"), recursive=True)
+                    matches = []
+                    for f in glob.glob(os.path.join(tmp_zip_dir, "**/*.pdf"), recursive=True):
+                        if os.path.splitext(os.path.basename(f))[0].upper() == country:
+                            matches.append(f)
                     if not matches:
                         st.warning(f"Template for {country} not found for {data.get('漢字氏名 | Name (in Kanji)', 'Unknown')}")
                         continue
