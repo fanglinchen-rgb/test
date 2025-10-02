@@ -3,3 +3,9 @@ pandas
 PyMuPDF
 pikepdf
 openpyxl
+fitz
+os
+tempfile
+zipfile
+glob
+datetime
