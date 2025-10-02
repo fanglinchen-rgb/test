@@ -1,11 +1,5 @@
-streamlit
-pandas
-PyMuPDF
-pikepdf
-openpyxl
-fitz
-os
-tempfile
-zipfile
-glob
-datetime
+streamlit==1.50.0
+pandas==2.3.3
+PyMuPDF==1.26.4
+pikepdf==9.11.0
+openpyxl==3.1.5
